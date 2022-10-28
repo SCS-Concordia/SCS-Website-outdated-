@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles/styles.css" /> <!-- This is how the CSS styles get linked to the web page -->
+    
+    <title>SCS Concordia</title>
+</head> 
+<body>
+
+    <div id="background"> <!-- This is the most senior user-defined parent div, it's where the static code backgroun image is that you see the other divs scroll over  -->
+    
+    <div id="wrapper"> <!-- This is the parent element for all main divs. Currently (27/10/22) it's not doing anything special, mostly there in case we need it -->
+        <!-- wrapper's children are the main site sections, all of which have the "site-section" class except the navbar -->
+
+        <nav> <!-- This is the nav bar. nav tag is basically just a div. Child of wrapper -->
+
+            <!-- There are two children of nav, an image and site-links which is a box containing the site links -->
+            <img id="scs-logo" src="assets/scslogo.PNG" />
+            
+            <div id="site-links"> <!-- Just a box containing smaller children boxes to put links in. Putting everything in a div like this makes it easy to leverage the power of flexbox -->
+                <!-- Notice all divs containing a site link have the "site-link" class  -->
+                <div class="site-link"><a href="https://www.google.com">Team</a></div>
+                <div class="site-link"><a href="">FAQ</a></div>
+                <div class="site-link"><a href="">Events</a></div>
+                <div class="site-link"><a href="">Competitions</a></div>
+                <div class="site-link"><a href="">Get Involved</a></div>
+                <div class="site-link"><a id="contact-link" href="">Contact</a></div>
+            </div>
+        </nav>
+
+        <!-- "hero" is from hero image, the style of having one big image taking up the whole screen when you land on the web page -->
+        <!-- instead of using an image I put a div and set its background image to the desired image. This makes it easier to style in some cases -->
+        <section id="hero" class="site-section">
+
+            <!-- "hero-shade" is a child of "hero". Its purpose is to change the color of the background image. -->
+            <!-- All it is is a translucent div with a gray background covering 100% height and width of hero. This was easier for me to do than editing the image -->
+            <div id="hero-shade"></div>
+        
+        </section>
+
+        <!-- about setion, child of wrapper -->
+        <section id="about" class="site-section">
+
+            <!-- "about" has two children, which are divs that split the section into two horizontal boxes, one for the image on the left and the other for text on the right -->
+            <div id="aliens">
+                <img src="assets/aliens.jpeg" />
+            </div>
+
+            <div id="about-us">
+                <h2>About Us</h2>
+                <p>We came to this planet in search of yellow cake for our flux capacitor. Instead we found a planet in dire need of help. So we decided to stay. Over the years we faced many challenges and made some friends along the way. These are our stories.</p>
+            </div>
+            
+        
+        </section>
+
+        <!-- These are empty divs used to make space between the sections. These are the gaps in the site that make it look like the other divs are scrolling over the fixed backgroun -->
+        <section class="spacer"></section>
+
+        <!-- Just another section, plaecholder text in it -->
+        <section id="mission" class="site-section">
+            <h2>Our Mission</h2>
+            <div id="mission-text">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra mauris in aliquam sem fringilla. Molestie a iaculis at erat pellentesque adipiscing commodo elit. Non curabitur gravida arcu ac tortor dignissim. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Cursus in hac habitasse platea dictumst quisque sagittis purus. Placerat duis ultricies lacus sed turpis tincidunt id. Nunc scelerisque viverra mauris in. Nullam ac tortor vitae purus faucibus ornare.
+            </p>
+            <p>
+                Felis eget nunc lobortis mattis aliquam faucibus purus in. Ac turpis egestas sed tempus urna. Pharetra et ultrices neque ornare aenean. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc. Enim diam vulputate ut pharetra sit amet aliquam. A arcu cursus vitae congue mauris. Et netus et malesuada fames ac. In iaculis nunc sed augue lacus. Id diam maecenas ultricies mi. Ultrices eros in cursus turpis massa tincidunt dui ut. Risus sed vulputate odio ut enim. Pharetra diam sit amet nisl. Quis auctor elit sed vulputate.
+            </p>
+            </div>
+        </section>
+
+        <!-- Events section with the event cards in it -->
+        <section id="events" class="site-section">
+
+            <!-- Three children of "events", all card divs. Notice the "card" class. Typical design pattern.  -->
+            <div class="card">
+                <h2>Event 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="card">
+                <h2>Event 2</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="card">
+                <h2>Event 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </section>
+
+        <!-- Another spacer -->
+        <section class="spacer"></section>
+
+        <!-- Just the sponsors section -->
+        <section id="sponsors" class="site-section">
+
+            <!-- Two children here. Notice that <h2> tags are treated like a div by flexbox, so "sponsors" has in effect two children -->
+            <h2>Our Sponsors</h2>
+
+            <!-- This is a box containing the sponsor images, again to make it easier to use flexbox to position the images -->
+            <div id="sponsor-logos">
+                <img class="sponsor" src="assets/sponsors/ibm.png" />
+                <img class="sponsor" src="assets/sponsors/google.png" />
+                <img class="sponsor" src="assets/sponsors/windows.png" />
+                <img class="sponsor" src="assets/sponsors/apple.png" />
+                <img class="sponsor" src="assets/sponsors/facebook.png" />
+            </div>
+        </section>
+
+        <!-- Finally, the contact section. -->
+        <section id="contact" class="site-section">
+
+            <!-- "contact" has three children which split the parent div into three horizontally. Notice the IDs and "contact-box" class -->
+
+            <div id="contact-box-1" class="contact-box">
+                
+                <!-- Sometimes it's practical to use an unordered list to position elements because they come with some default behaviour that's sometimes desirable -->
+                <ul>
+                    <li><h2>Contact us</h2></li>
+                    <li>123 Milky Way drive</li>
+                    <li>International Space Station</li>
+                    <li>SPC 010</li>
+                    <li>&nbsp</li>
+                    <li>scs@concordia.ca</li>
+                    <li>514-555-2235</li>
+                </ul>
+            </div>
+
+            <div id="contact-box-2" class="contact-box"></div>
+
+            <div id="contact-box-3" class="contact-box"></div>
+        </section>
+
+    </div> <!-- END OF WRAPPER -->
+    </div> <!-- END OF BACKGROUND -->
+
+    <script src="js/index.js"></script> <!-- This links the javascript file to the page, which currently (as of 27/10/22) only contains the smooth scrolling script for the contact link in the navbar -->
+</body>
+</html>
