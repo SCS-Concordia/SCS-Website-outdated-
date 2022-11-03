@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles/styles.css" /> <!-- This is the default stylesheet; use the basic styles from there and add your own stylesheet -->
+    
+    <title>SCS Concordia</title>
+</head> 
+<body>
+
+    <div id="background"> <!-- This is the most senior user-defined parent div, it's where the static code backgroun image is that you see the other divs scroll over  -->
+    
+    <div id="wrapper"> <!-- This is the parent element for all main divs. Currently (27/10/22) it's not doing anything special, mostly there in case we need it -->
+        <!-- wrapper's children are the main site sections, all of which have the "site-section" class except the navbar -->
+
+        <nav> <!-- This is the nav bar. nav tag is basically just a div. Child of wrapper -->
+
+            <!-- There are two children of nav, an image and site-links which is a box containing the site links -->
+            <img id="scs-logo" src="assets/scslogo.PNG" />
+            
+            <div id="site-links"> <!-- Just a box containing smaller children boxes to put links in. Putting everything in a div like this makes it easy to leverage the power of flexbox -->
+                <!-- Notice all divs containing a site link have the "site-link" class  -->
+                <div class="site-link"><a href="">Events</a></div>
+                <div class="site-link"><a href="">Team</a></div>
+                <div class="site-link"><a href="">Sponsors</a></div>
+                <div class="site-link"><a href="">Competitions</a></div>
+                <div class="site-link"><a href="">Algotime</a></div>
+                <div class="site-link"><a id="contact-link" href="">Contact</a></div>
+            </div>
+        </nav>
+
+        <!-- Your site sections go here -->
+        <section id="hero" class="site-section">
+        
+        </section>
+
+       <!-- FOOTER: TO-DO -->
+
+    </div> <!-- END OF WRAPPER -->
+    </div> <!-- END OF BACKGROUND -->
+
+</body>
+</html>
