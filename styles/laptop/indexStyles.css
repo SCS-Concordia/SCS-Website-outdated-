@@ -1,0 +1,37 @@
+@media (min-width: 1000px) {
+    
+
+#about {
+    height: 66vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+#events {
+    height: fit-content;
+}
+
+#event-cards {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: fit-content;
+    
+}
+
+.card {
+    border-top: 2px solid gray;
+    border-left: 2px solid gray;
+    box-sizing: border-box;
+    height: fit-content;
+    width: 27.5%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-shadow: 0.5rem 0.5rem var(--concordia);
+}
+
+#sponsors {
+    padding: 0;
+}
+
+}

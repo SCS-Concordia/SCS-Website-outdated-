@@ -1,0 +1,9 @@
+@media (min-width: 1000px) {
+    #sponsors-text-1, #sponsors-text-2 {
+        height: 66vh;
+    }
+
+    #sponsors-logos {
+        height: 80vh;
+    }
+}

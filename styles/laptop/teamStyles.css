@@ -1,0 +1,19 @@
+@media (min-width: 1000px) {
+
+#team {
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.team-card {
+    width: 45%;
+}
+
+}

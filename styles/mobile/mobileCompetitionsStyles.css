@@ -1,0 +1,70 @@
+#competitions-text {
+    background-color: var(--coral);
+    width: 100%;
+    min-height: 66vh;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 1rem;
+    align-items: flex-start;
+    font-size: 1.25rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#competitions-text a {
+    text-decoration: none;
+}
+
+#competitions-text a:hover {
+    text-decoration: underline;
+}
+
+#discord-link-2 {
+    color: #445282;
+}
+
+#instagram-link-2 {
+    color: var(--concordia);
+}
+
+.event-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.event-card {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 2rem;
+    background-color: var(--snow);
+    box-sizing: border-box;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#upcoming-events {
+    margin-top: 2rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2.5%;
+    display: flex;
+    flexflow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    flex: 1;
+    height: fit-content;
+}
+
+.event-image {
+    width: 100%;
+}
+
+.event-text {
+    flex: 1;
+}

@@ -1,0 +1,42 @@
+nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#team {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 1rem 0 0 0;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.team-card {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    background-color: var(--snow);
+    box-sizing: border-box;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.image-container {
+    flex: 1;
+    height: fit-content;
+}
+
+.team-image {
+    width: 15rem;
+}
+
+.team-text {
+    flex: 1;
+}

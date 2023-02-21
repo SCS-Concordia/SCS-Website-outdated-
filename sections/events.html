@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../styles/mobile/mobileStyles.css" />
+    <link rel="stylesheet" href="../styles/mobile/mobileEventsStyles.css" />
+    <link rel="stylesheet" href="../styles/laptop/styles.css" /> 
+    <link rel="stylesheet" href="../styles/laptop/eventsStyles.css" /> 
+    <link rel="stylesheet" href="../styles/large/largeStyles.css" />
+    
+    <title>SCS Concordia</title>
+</head> 
+<body>
+
+    <div id="background"> <!-- This is the most senior user-defined parent div, it's where the static code backgroun image is that you see the other divs scroll over  -->
+    
+    <div id="wrapper"> <!-- This is the parent element for all main divs. Currently (27/10/22) it's not doing anything special, mostly there in case we need it -->
+        <!-- wrapper's children are the main site sections -->
+
+        <nav> <!-- This is the nav bar. nav tag is basically just a div. Child of wrapper -->
+        </nav>
+
+        <!-- Your site sections go here -->
+        <!-- <header>
+            <h1>Events</h1>
+        </header> -->
+
+       <section id="events-container">
+            <!-- This is filled automatically by the script -->
+       </section>
+
+       <section id="past-events">
+        <h3>Click here for past events</h3>
+        <h4>For event sponsorhips or partnerships contact us here</h4>
+       </section>
+
+       <footer>
+
+       </footer>
+
+    </div> <!-- END OF WRAPPER -->
+    </div> <!-- END OF BACKGROUND -->
+
+    <script src="../js/index.js" type="module"></script>
+    <script src="../js/eventTemplateScript.js" type="module"></script>
+</body>
+</html>

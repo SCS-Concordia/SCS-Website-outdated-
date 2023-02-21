@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Work+Sans:wght@600&display=swap');
+
+:root {
+    --concordia: #881100;
+    --babyblue: #89CFF0;
+    --peach: #FDCAA3;
+    --coral: #F26C67;
+    --snow: #FFFAFA;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'DM Sans';
+
+}
+
+#background {
+    height: fit-content;
+    width: 100%;
+    background-color: white;
+    /* background-image: url("../../assets/source_background.PNG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;  */
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    height: 2.5rem;
+    color: snow;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background-color: var(--concordia);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* This controls the behaviour when you hover over a link in the navbar */
+nav a:hover {
+    text-decoration: underline;
+}
+
+section, header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.spacer {
+    height: 30vh;
+    width: 100%;
+    background: var(--snow);
+    opacity: 0.2;
+}
+
+#scs-logo {
+    height: 100%;
+    cursor: pointer;
+}
+
+#scs-logo img {
+    height: 100%;
+}
+
+#site-links {
+    width: 40%;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.site-link {
+    display: none;
+}
+
+#contact-link {
+    display: none;
+}
+
+#hamburger {
+    display: block;
+    height: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.flip-burger {
+    transform: rotate(90deg);
+}
+
+#mobile-menu {
+    z-index: 2;
+    display: flex;
+    opacity: 0.9;
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    padding: 5%;
+    box-sizing: border-box;
+    
+    background-color: #F1F2EF;
+    transition: opacity 0.3s;
+    
+    
+}
+
+.hide-menu {
+    top: 2.5rem !important;
+    opacity: 0 !important;
+    height: 0px !important;
+    width: 0px !important;
+    /* position: fixed !important;
+    right: -100px !important; */
+}
+
+.mobile-menu-link {
+    display: none;
+}
+
+#mobile-menu a {
+    font-size: 3rem;
+    text-decoration: none;
+    color: var(--concordia);
+}
+
+#discord-link, #instagram-link {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#discord {
+    height: 1.25rem;
+    width: 1.25rem;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}
+
+#instagram {
+    height: 1rem;
+    width: 1rem;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+
+#instagram:hover, #discord:hover, #scs-logo:hover {
+    transform: scale(1.2,1.2);
+}
+
+footer {
+    background-color: var(--concordia);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    box-sizing: border-box;
+    padding-bottom: 3rem;
+}
+
+.contact-box {
+    height: 100%;
+    /* width: 33%; */
+}
+
+#contact-box-1 {
+    flex: auto;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+#contact-box-2 {
+    flex: auto;
+    width: 33%;
+    height: 20vh;
+}
+
+#contact-box-3 {
+    flex: auto;
+    width: auto;
+    height: 20vh;
+}
+
+.contact-box {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-box ul {
+    margin: 0;
+}
+
+#contact-box-2 ul h2, #contact-box-3 ul h2 {
+    display: none;
+}
+
+.contact-box a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    color: #212931;
+    text-decoration: underline;
+}
+
+/* This removes the default bullets from the unordered list */
+.contact-box ul {
+    list-style-type: none;
+}

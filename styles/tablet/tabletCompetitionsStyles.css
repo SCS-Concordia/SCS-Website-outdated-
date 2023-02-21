@@ -1,0 +1,5 @@
+@media (min-width: 641px) {
+    #competitions-text {
+        min-height: 30vh;
+    }
+}
