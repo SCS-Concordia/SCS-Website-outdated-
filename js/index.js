@@ -1,115 +1,94 @@
-import navbar from '../templates/navbar.js';
-import footer from '../templates/footer.js';
-import mobileMenuInner from '../templates/mobileMenu.js';
+import navbar from "../templates/navbar.js";
+import footer from "../templates/footer.js";
+import mobileMenuInner from "../templates/mobileMenu.js";
 
 // Wait for everything to load before selecting elements (otherwise script may run before elements are loaded)
 window.onload = () => {
-    // Insert navbar contents from template into <nav> tag
-    document.querySelector('nav').innerHTML = navbar;
+  // Insert navbar contents from template into <nav> tag
+  document.querySelector("nav").innerHTML = navbar;
 
-    // Insert mobile menu after navbar
-    const mobileMenu = document.createElement('div');
-    mobileMenu.setAttribute('id', 'mobile-menu');
-    mobileMenu.classList.add('hide-menu');
-    mobileMenu.innerHTML = mobileMenuInner;
-    document.querySelector('nav').after(mobileMenu);
+  // Insert mobile menu after navbar
+  const mobileMenu = document.createElement("div");
+  mobileMenu.setAttribute("id", "mobile-menu");
+  mobileMenu.classList.add("hide-menu");
+  mobileMenu.innerHTML = mobileMenuInner;
+  document.querySelector("nav").after(mobileMenu);
 
-    // Insert footer contents from teomplate into <footer> tag
-    document.querySelector('footer').innerHTML = footer;
+  // Insert footer contents from teomplate into <footer> tag
+  document.querySelector("footer").innerHTML = footer;
 
+  const hamburger = document.querySelector("#hamburger");
 
-    // document.addEventListener('click', e => {
-    //     const isLocationHome = (window.location.pathname.indexOf('index') >= 0) ? true : false;
+  hamburger.addEventListener("click", (e) => {
+    const mobileLinks = document.querySelectorAll(".mobile-menu-link");
+    e.target.classList.toggle("flip-burger");
+    document.querySelector("#mobile-menu").classList.toggle("hide-menu");
+    mobileLinks.forEach((link) => (link.style.display = "block"));
+  });
 
-    //     e.preventDefault();
-        
-    //     if (e.target.parentNode.classList.contains('site-link')) {
-    //         const text = e.target.innerText;
+  document.querySelector("#contact-link").addEventListener("click", (e) => {
+    e.preventDefault();
 
-    //         if (isLocationHome) window.location = `./sections/${text}.html`;
-    //         else window.location = `./${text}.html`;
-            
-    //     } else if (e.target.id === 'scs-logo') {
-    //         if (isLocationHome) window.location = './index.html';
-    //         else window.location = '../index.html';
-    //     } else if (e.target.id == 'discord') {
-    //         // window.open('https://discord.gg/nuv4UC6n');
-    //         window.open('www.google.com');
-    //     } else if (e.target.id == "instagram") {
+    document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
+  });
 
-    //     }
-    // })
+  document
+    .querySelector("#mobile-contact-link")
+    .addEventListener("click", (e) => {
+      e.preventDefault();
 
-    const hamburger = document.querySelector('#hamburger');
+      hamburger.classList.toggle("flip-burger");
 
-    hamburger.addEventListener('click', e => {
-        const mobileLinks = document.querySelectorAll('.mobile-menu-link');
-        e.target.classList.toggle('flip-burger');
-        document.querySelector('#mobile-menu').classList.toggle('hide-menu');
-        mobileLinks.forEach(link => link.style.display = 'block');
-    })
+      document.querySelector("#mobile-menu").classList.toggle("hide-menu");
 
-    document.querySelector('#contact-link').addEventListener('click', e => {
-        e.preventDefault();
+      document
+        .querySelectorAll(".mobile-menu-link")
+        .forEach((link) => (link.style.display = "none"));
 
-        document.querySelector('footer').scrollIntoView({behavior: 'smooth'});
-    }) 
+      document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
+    });
 
-    document.querySelector('#mobile-contact-link').addEventListener('click', e => {
-        e.preventDefault();
+  // document.addEventListener('click', e => {
+  //     if (e.target.id == 'hamburger' || e.target.classList.contains('hamburger-slice')) {
+  //         document.querySelector('#hamburger').classList.add('flip-burger');
 
-        hamburger.classList.toggle('flip-burger');
+  //         document.querySelectorAll('.mobile-menu-link').forEach(link => {
+  //             link.style.display = 'block';
+  //         })
 
-        document.querySelector('#mobile-menu').classList.toggle('hide-menu');
+  //         document.querySelector('#mobile-menu').classList.remove('hide-menu');
 
-        document.querySelectorAll('.mobile-menu-link').forEach(link => link.style.display = 'none');
+  //     } else if (e.target.id == "mobile-contact-link") {
+  //         e.preventDefault();
 
-        document.querySelector('footer').scrollIntoView({behavior: 'smooth'});
-    }) 
+  //         document.querySelector('#mobile-menu').classList.add('hide-menu');
 
+  //         document.querySelector('#hamburger').classList.add('flip-burger');
 
-    // document.addEventListener('click', e => {
-    //     if (e.target.id == 'hamburger' || e.target.classList.contains('hamburger-slice')) {
-    //         document.querySelector('#hamburger').classList.add('flip-burger');
+  //         document.querySelectorAll('.mobile-menu-link').forEach(link => {
+  //             link.style.display = 'none';
+  //         });
 
-    //         document.querySelectorAll('.mobile-menu-link').forEach(link => {
-    //             link.style.display = 'block';
-    //         })
+  //         document.querySelector('#hamburger').classList.remove('flip-burger');
 
-    //         document.querySelector('#mobile-menu').classList.remove('hide-menu');
-            
-    //     } else if (e.target.id == "mobile-contact-link") {
-    //         e.preventDefault();
-            
-    //         document.querySelector('#mobile-menu').classList.add('hide-menu');
+  //         document.querySelector('footer').scrollIntoView({behavior: 'smooth'});
+  //     }
+  // })
 
-    //         document.querySelector('#hamburger').classList.add('flip-burger');
+  // const mobileMenuLoaded = document.querySelector('#mobile-menu')
 
-    //         document.querySelectorAll('.mobile-menu-link').forEach(link => {
-    //             link.style.display = 'none';
-    //         });
+  // document.addEventListener('click', e => {
+  //     if (e.target.id == 'hamburger') {
+  //         mobileMenuLoaded.style.display = 'flex';
+  //     }
+  // })
 
-    //         document.querySelector('#hamburger').classList.remove('flip-burger');
+  // const observer = new MutationObserver(function() {
+  //     if (mobileMenuLoaded.style.display != 'none') {
+  //         console.log('sdfs');
+  //         mobileMenuLoaded.style.opacity = '0.9';
+  //     }
+  // });
 
-    //         document.querySelector('footer').scrollIntoView({behavior: 'smooth'});
-    //     }
-    // })
-
-    // const mobileMenuLoaded = document.querySelector('#mobile-menu')
-
-    // document.addEventListener('click', e => {
-    //     if (e.target.id == 'hamburger') {
-    //         mobileMenuLoaded.style.display = 'flex';
-    //     }
-    // })
-
-    // const observer = new MutationObserver(function() {
-    //     if (mobileMenuLoaded.style.display != 'none') {
-    //         console.log('sdfs');
-    //         mobileMenuLoaded.style.opacity = '0.9';
-    //     }
-    // });
-
-    // observer.observe(mobileMenuLoaded, { attributes: true, childList: true });
+  // observer.observe(mobileMenuLoaded, { attributes: true, childList: true });
 };
-

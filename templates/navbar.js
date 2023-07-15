@@ -1,10 +1,12 @@
 // Are we on the home page or in a site section
-const pathAdjust1 = (window.location.pathname.indexOf('sections') >= 0) ? '../' : './';
-const pathAdjust2 = (window.location.pathname.indexOf('sections') >= 0) ? './' : './sections/';
+const pathAdjust1 =
+  window.location.pathname.indexOf("sections") >= 0 ? "../" : "./";
+const pathAdjust2 =
+  window.location.pathname.indexOf("sections") >= 0 ? "./" : "./sections/";
 
 const navbar = `
         <a id="scs-logo" href="${pathAdjust1}index.html">
-        <img src="${pathAdjust1}assets/scslogo.PNG" />
+        <img src="${pathAdjust1}assets/scslogo.svg" />
         </a>
         <div id="site-links">
             <div class="site-link"><a href="${pathAdjust2}team.html">Team</a></div>
