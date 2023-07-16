@@ -13,6 +13,39 @@
     color: #8065cd;
   }
 
+  .title-and-subtitle-banner{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .title-and-subtitle-banner h1{
+    font-size: 60px;
+    margin: 0;
+  }
+
+  .title-and-subtitle-banner h3{
+    font-size: 30px;
+    margin: 0;
+  }
+
+
+  .algotime-and-clothing-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .algotime-and-clothing-btn button {
+    background-color: transparent;
+    color: #ffffff;
+    margin: 5px;
+    width: 140px;
+    font-size: 14px;
+  }
   #site-links {
     display: flex;
     justify-content: space-evenly;
